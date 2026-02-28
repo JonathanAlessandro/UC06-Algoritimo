@@ -22,13 +22,9 @@ i=0
 total = 0
 
 while i<=4:
-    
-    aluno["notas"].append(float(input("Digite a nota: ")))
-    i+=1
 
-# while aluno["notas"]<=4:
-#     nota_unica = aluno["notas"]
-#     total += nota_unica
+    aluno["notas"].append(float(input("Digite as notas do aluno: ")))
+    i+=1
 
 print(aluno)
 
