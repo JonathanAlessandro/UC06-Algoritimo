@@ -1,12 +1,12 @@
 notas= []
-i=0
-
-while i < 6:
-    i+=1
-    nota = int(input(f"Digite {i} a nota do aluno: "))
-    notas.append(nota)
 
 def calculo_nota():
+    i=0
+    while i <6:
+        i+=1
+        nota = int(input(f"Digite {i} a nota do aluno: "))
+        notas.append(nota)
+
     total = sum(notas)/len(notas)
     return total
 
