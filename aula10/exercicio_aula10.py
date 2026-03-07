@@ -17,3 +17,4 @@ with open("aula10/cadastro.txt","r") as leitura_texto:
     texto = leitura_texto.read()
     print(texto)
 
+
