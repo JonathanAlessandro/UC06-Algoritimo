@@ -32,9 +32,9 @@ leitura_excel = pd.read_excel("Aula12\cadastro_alunos.xlsx",dtype={'idade': str}
 #o loc precisa de 2 informações
 #1 = numero da linha / 2 = nome da coluna
 
-# proxima_linha= len(leitura_excel)
+proxima_linha= len(leitura_excel)
 
-# leitura_excel.loc[proxima_linha,"nome"] = dados["nome"]
+leitura_excel.loc[proxima_linha,"nome"] = dados["nome"]
 # leitura_excel.loc[proxima_linha,"idade"] = dados["idade"]
 # leitura_excel.loc[proxima_linha,"altura"] = dados["altura"]
 
