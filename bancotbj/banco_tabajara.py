@@ -48,8 +48,6 @@ Ao finalizar mostrar para o usuário o nome_cliente, cpf, tipo_conta, numero_con
 > Precisa percorrer o excel e encontra o cliente com os mesmo dados de cpf e numero_conta caso encontre o cliente na base retornar uma mensagem: "Bem-vindo "nome_cliente" ao banco Tabajara" SENAO se o usuario não existir na base então retornamos uma mensagem "Usuário não encontrado, tentar novamente ou realizar o cadastro"
 
 
-
-
 SEGUNDA PARTE
 
 Quando o usuário selecionar a opção "2 - Acessar conta" e o campo cpf e numero_conta forem encontrados na base, além de mostrar a mensagem acima, mostre um menu com as seguintes opções:
@@ -76,7 +74,6 @@ OBS: Criar a logica de desconto da taxa para cada conta especifica
 2 - Deposito > solicitar ao usuário que digite um valor, podendo ser inteiro ou de ponto flutuante, se o valor for valido então somar com o valor já existente na coluna "extrato_bancario" e mostrar o valor final da conta bancaria(coluna extrato_bancario);
 - Se o usuário digita um número negativo então encerre o fluxo e mostre a mensagem "Numero invalido, operação encerrada";
 
-
 3 - Saldo > Mostre em tela o seguinte template
 print("================================================")
 print("   Tipo conta: (coluna tipo_conta)")
@@ -102,7 +99,7 @@ opcao = int(input("R: "))
 #faço a conexão e criação do arquivo caso não exista
 #se o caminho existir apenas atribui o arquivo a variavel
 if os.path.exists(FILE_PATH):
-    df = pd.read_excel(FILE_PATH,dtype={'cpf': str})
+    df = pd.read_excel(FILE_PATH,dtype={'cpf': str,"extrato_bancario":float})
 #caso o arquivo não exista cria o arquivo com os campos vazios apenas as colunas definidas
 else:
     df = pd.DataFrame(columns=[
@@ -250,7 +247,7 @@ def saque(login):
 
 def deposito(login):
     try:
-        valor_deposito = float(input("Qual o valor que deseja sacar: "))
+        valor_deposito = float(input("Qual o valor que deseja Depositar: "))
     except ValueError:
         print("Valor inválido!")
         return
